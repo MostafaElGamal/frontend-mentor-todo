@@ -3,30 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Frontend Mentor | Todo app</title>
   </head>
   <body>
-    Todo
-
-    <!-- Add dynamic number -->
-    items left All Active Completed Clear Completed Drag and drop to reorder
-    list
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor
-      </a>
-      Coded by <a href="#">Your Name Here</a>.
+    <header class="page-header">
+      <img src="/assets/images/bg-desktop-light.jpg" class="page-header__img" />
+    </header>
+    <div class="page-body">
+      <header class="page-body__header-section">
+        <h3 class="page-body__title">TODO</h3>
+        <button class="page-body__theme-btn">
+          <img src="/assets/images/icon-moon.svg" alt="" />
+        </button>
+      </header>
+      <div class="page-body__content">
+        <div class="page-body__main-input-holder">
+          <div class="page-body__checkbox-holder">
+            <div class="page-body__checkbox">
+              <input type="checkbox" name="newTaskCheck" id="newTaskCheck" />
+              <label for="newTaskCheck"></label>
+            </div>
+          </div>
+          <input
+            type="text"
+            class="page-body__input"
+            placeholder="Create New Task"
+          />
+        </div>
+        <ul class="page-body__list">
+          <li class="page-body__list-item">
+            <div class="page-body__checkbox-holder">
+              <div class="page-body__checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox"></label>
+              </div>
+              <label for="checkbox" class="page-body__label-text">
+                Todo Name
+              </label>
+            </div>
+            <button class="page-body__delete-task">x</button>
+          </li>
+          <li class="page-body__list-item">
+            <div class="page-body__checkbox-holder">
+              <div class="page-body__checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox"></label>
+              </div>
+              <label for="checkbox" class="page-body__label-text">
+                Todo Name
+              </label>
+            </div>
+            <button class="page-body__delete-task">x</button>
+          </li>
+          <li class="page-body__list-item">
+            <div class="page-body__checkbox-holder">
+              <div class="page-body__checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox"></label>
+              </div>
+              <label for="checkbox" class="page-body__label-text">
+                Todo Name
+              </label>
+            </div>
+            <button class="page-body__delete-task">x</button>
+          </li>
+          <li class="page-body__list-item">
+            <div class="page-body__checkbox-holder">
+              <div class="page-body__checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox"></label>
+              </div>
+              <label for="checkbox" class="page-body__label-text">
+                Todo Name
+              </label>
+            </div>
+            <button class="page-body__delete-task">x</button>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
