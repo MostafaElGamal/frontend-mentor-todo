@@ -32,32 +32,24 @@
         </button>
       </header>
       <div class="page-body__content">
-        <div class="page-body__main-input-holder">
+        <form class="page-body__main-input-holder" id="addTaskForm">
           <div class="page-body__checkbox-holder">
             <div class="page-body__checkbox">
-              <input type="checkbox" name="newTaskCheck" id="newTaskCheck" />
-              <label for="newTaskCheck"></label>
+              <input type="checkbox" name="taskStatus" id="taskStatus" />
+              <label for="taskStatus"></label>
             </div>
           </div>
           <input
             type="text"
             class="page-body__input"
             placeholder="Create New Task"
+            name="taskName"
+            id="addTaskInput"
           />
-        </div>
+          <button type="submit"></button>
+        </form>
         <ul class="page-body__list" id="tasksList">
-          <li class="page-body__list-item">
-            <div class="page-body__checkbox-holder">
-              <div class="page-body__checkbox">
-                <input type="checkbox" name="checkbox" id="checkbox" />
-                <label for="checkbox"></label>
-              </div>
-              <label for="checkbox" class="page-body__label-text">
-                Todo Name
-              </label>
-            </div>
-            <button class="page-body__delete-task">x</button>
-          </li>
+          <!-- Todo List -->
         </ul>
       </div>
     </div>

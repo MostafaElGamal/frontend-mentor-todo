@@ -21,7 +21,7 @@
     cursor: pointer;
   }
   &__content {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
   &__main-input-holder {
     background-color: #ffffff;
@@ -29,6 +29,9 @@
     display: flex;
     align-items: center;
     padding: 0.2rem 1.3rem;
+    button {
+      display: none;
+    }
   }
   &__input {
     font-size: 2rem;
@@ -108,6 +111,9 @@
   &__label-text {
     font-size: 1.8rem;
     margin: 0.3rem 1rem 0;
+    &--completed {
+      text-decoration: line-through;
+    }
   }
   &__delete-task {
     border: 0;
