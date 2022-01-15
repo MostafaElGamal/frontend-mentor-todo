@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
     />
+
+    <script src="./assets/js/app.js" data-main="scripts/main"></script>
     <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Frontend Mentor | Todo app</title>
   </head>
@@ -43,43 +45,7 @@
             placeholder="Create New Task"
           />
         </div>
-        <ul class="page-body__list">
-          <li class="page-body__list-item">
-            <div class="page-body__checkbox-holder">
-              <div class="page-body__checkbox">
-                <input type="checkbox" name="checkbox" id="checkbox" />
-                <label for="checkbox"></label>
-              </div>
-              <label for="checkbox" class="page-body__label-text">
-                Todo Name
-              </label>
-            </div>
-            <button class="page-body__delete-task">x</button>
-          </li>
-          <li class="page-body__list-item">
-            <div class="page-body__checkbox-holder">
-              <div class="page-body__checkbox">
-                <input type="checkbox" name="checkbox" id="checkbox" />
-                <label for="checkbox"></label>
-              </div>
-              <label for="checkbox" class="page-body__label-text">
-                Todo Name
-              </label>
-            </div>
-            <button class="page-body__delete-task">x</button>
-          </li>
-          <li class="page-body__list-item">
-            <div class="page-body__checkbox-holder">
-              <div class="page-body__checkbox">
-                <input type="checkbox" name="checkbox" id="checkbox" />
-                <label for="checkbox"></label>
-              </div>
-              <label for="checkbox" class="page-body__label-text">
-                Todo Name
-              </label>
-            </div>
-            <button class="page-body__delete-task">x</button>
-          </li>
+        <ul class="page-body__list" id="tasksList">
           <li class="page-body__list-item">
             <div class="page-body__checkbox-holder">
               <div class="page-body__checkbox">

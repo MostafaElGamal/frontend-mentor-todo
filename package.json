@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "watch:scss": "node-sass -w ./assets/scss/main.scss ./assets/css/style.css --output-style compressed",
-    "dev": "npm run watch:scss"
+    "build:scss": "node-sass ./assets/scss/main.scss ./assets/css/style.css --output-style compressed",
+    "watch:js": "tsc --watch",
+    "build:js": "tsc --build",
+    "live-serve": "live-server",
+    "build": "npm run build:scss && npm run build:js",
+    "dev": "npm-run-all --parallel watch:scss watch:js live-serve"
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,10 @@
   },
   "homepage": "https://github.com/MostafaElGamal/frontend-mentor-todo#readme",
   "dependencies": {
+    "live-server": "^1.2.1",
     "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

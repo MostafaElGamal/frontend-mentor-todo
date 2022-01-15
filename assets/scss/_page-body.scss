@@ -54,6 +54,9 @@
     justify-content: space-between;
     border-bottom: solid 1px #757597;
     padding: 0 2rem;
+    &:last-child {
+      border-bottom: 0;
+    }
   }
   &__checkbox-holder {
     display: flex;
