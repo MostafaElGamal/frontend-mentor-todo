@@ -49,7 +49,7 @@ class Task {
 class Tasks {
     constructor(tasks) {
         this.taskListEle = document.getElementById(ElementSelectors.tasksListId);
-        this.tasks = tasks;
+        this.tasks = tasks || [];
         this.intialTasks();
     }
     intialTasks() {
@@ -84,8 +84,14 @@ class Tasks {
         const selectedTask = this.tasks.find((task) => task.id === parseInt(taskId));
         if (selectedTask)
             selectedTask.status = !selectedTask.status;
+        alert(selectedTask === null || selectedTask === void 0 ? void 0 : selectedTask.status);
         const labelText = document.getElementById(ElementSelectors.checkboxLabelID + taskId);
-        labelText === null || labelText === void 0 ? void 0 : labelText.classList.toggle(ElementSelectors.checkboxLabelCompletedClass);
+        if (selectedTask === null || selectedTask === void 0 ? void 0 : selectedTask.status) {
+            labelText === null || labelText === void 0 ? void 0 : labelText.classList.add(ElementSelectors.checkboxLabelCompletedClass);
+        }
+        else {
+            labelText === null || labelText === void 0 ? void 0 : labelText.classList.remove(ElementSelectors.checkboxLabelCompletedClass);
+        }
     }
     completeTaskListener() {
         document
@@ -129,8 +135,8 @@ class Tasks {
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
-    const task0 = new Task("task 1", true, 3);
-    const task1 = new Task("task 2", false, 2);
-    const task2 = new Task("task 3", false, 1);
-    new Tasks([task0, task1, task2]);
+    // const task0 = new Task("task 1", true, 3);
+    // const task1 = new Task("task 2", false, 2);
+    // const task2 = new Task("task 3", false, 1);
+    new Tasks([]);
 });

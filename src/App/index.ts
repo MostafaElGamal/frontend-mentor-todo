@@ -65,7 +65,7 @@ class Tasks {
 
   constructor(tasks: Array<Task>) {
     this.taskListEle = document.getElementById(ElementSelectors.tasksListId);
-    this.tasks = tasks;
+    this.tasks = tasks || [];
     this.intialTasks();
   }
 
@@ -108,10 +108,16 @@ class Tasks {
       (task) => task.id === parseInt(taskId),
     );
     if (selectedTask) selectedTask.status = !selectedTask.status;
+    alert(selectedTask?.status);
     const labelText = document.getElementById(
       ElementSelectors.checkboxLabelID + taskId,
     );
-    labelText?.classList.toggle(ElementSelectors.checkboxLabelCompletedClass);
+
+    if (selectedTask?.status) {
+      labelText?.classList.add(ElementSelectors.checkboxLabelCompletedClass);
+    } else {
+      labelText?.classList.remove(ElementSelectors.checkboxLabelCompletedClass);
+    }
   }
 
   private completeTaskListener() {
@@ -161,9 +167,9 @@ class Tasks {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const task0 = new Task("task 1", true, 3);
-  const task1 = new Task("task 2", false, 2);
-  const task2 = new Task("task 3", false, 1);
+  // const task0 = new Task("task 1", true, 3);
+  // const task1 = new Task("task 2", false, 2);
+  // const task2 = new Task("task 3", false, 1);
 
-  new Tasks([task0, task1, task2]);
+  new Tasks([]);
 });
